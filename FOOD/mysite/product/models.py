@@ -9,7 +9,7 @@ class Restaurant(models.Model):
     restaurant_address=models.CharField(max_length=120,null=True)
     upload_image_path=models.ImageField(upload_to='mysite')
 
-    def __unicode__(self):
+    def __str__(self):
         return self.restaurant_name
 
     def get_absolute_url(self):
@@ -23,7 +23,7 @@ class Product_Details(models.Model):
     product_price=models.DecimalField(decimal_places=2,max_digits=1000)
 
 
-    def __unicode__(self):
+    def __str__(self):
         return self.product_name
 
 class User_Details(models.Model):

@@ -5,7 +5,7 @@ from django.conf.urls.static import static
 from wagtail.admin import urls as wagtailadmin_urls
 from wagtail.documents import urls as wagtaildocs_urls
 from wagtail.core import urls as wagtail_urls
-from django.urls import re_path
+from django.conf import settings
 
 
 urlpatterns=[
@@ -16,8 +16,8 @@ urlpatterns=[
     # url('cart',cart_view,name='cart_s
     # url('updates/(?P<n1>\d+)/(?P<n2>\d+)$',update_quantity,name='update_view'),
     # url('updates/$',update_quantity,name='update_view')
-    re_path(r'^cms/', include(wagtailadmin_urls)),
-    re_path(r'^documents/', include(wagtaildocs_urls)),
-    re_path(r'^pages/', include(wagtail_urls)),
+    url(r'^cms/', include(wagtailadmin_urls)),
+    url(r'^documents/', include(wagtaildocs_urls)),
+    url(r'^pages/', include(wagtail_urls)),
 
-] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+]
