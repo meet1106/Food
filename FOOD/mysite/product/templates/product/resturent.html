@@ -1,6 +1,5 @@
 {% load static %}
 <html>
-<html lang="en">
 <head>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
@@ -20,31 +19,13 @@
         <h1><font color="green">Resturents</font></h1>
 
         {% for i in data %}
-         <p><a href="{% url 'pro_data' i.id %}"><img src="{% static i.upload_image_path %}"></a></p>
-
-        <p><label>Resturent Name:</label><a href="{% url 'pro_data' i.id %}"> {{ i.restaurant_name }}</a></p>
-        <p><label>Resturent Description:</label> {{ i.restaurant_description }}</p>
-        <p><label>Resturent Address:</label> {{ i.restaurant_address }}</p>
+            <p><img src="{% static i.upload_image_path %}"></p>
+            <p><label>Resturent Name:</label><a href="{% url 'pro_data' i.id %}"> {{ i.restaurant_name }}</a></p>
+            <p><label>Resturent Description:</label> {{ i.restaurant_description }}</p>
+            <p><label>Resturent Address:</label> {{ i.restaurant_address }}</p>
         {% endfor %}
     </form>
 </div>
-
-<!--{{ data }}-->
-
-
-<!--{% for instance in data %}-->
-
-
-    <!--&lt;!&ndash;<img src="{% static "mysite/download.jpg" %}" alt="My image">&ndash;&gt;-->
-    <!--<p><a href="{% url 'pro_data' instance.id %}"><img src="{% static instance.upload_image_path %}"></a></p>-->
-    <!--&lt;!&ndash;<p>{{ instance.upload_image_path }}</p>&ndash;&gt;-->
-
-    <!--<p> {{ instance.id }} - <a href="{% url 'pro_data' instance.id %}">{{ instance.restaurant_name }}</a>  </p>-->
-    <!--<p> {{ instance.restaurant_description }} </p>-->
-    <!--<p> {{ instance.restaurant_address }} </p>-->
-
-
-<!--{% endfor %}-->
 
 </body>
 </html>

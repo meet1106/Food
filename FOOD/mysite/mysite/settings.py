@@ -67,6 +67,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'wagtail.core.middleware.SiteMiddleware',
     'wagtail.contrib.redirects.middleware.RedirectMiddleware',
+    # 'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'mysite.urls'
@@ -139,6 +140,8 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = "C:/Users/Mit Jobanputra/PycharmProjects/FOOD/mysite/image"
+# STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
@@ -148,4 +151,6 @@ STATICFILES_DIRS = [
 # STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 WAGTAIL_SITE_NAME = 'mysite1'
+
+# STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 

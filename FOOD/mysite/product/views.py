@@ -4,11 +4,11 @@ from django.contrib.auth import get_user_model
 from django.http import HttpResponseRedirect
 
 def resturent_data(request):
-    data=Restaurant.objects.all()
+    data=Restaurant.objects.all().values()
 
 
     context={
-        'data':data,
+        'data': data,
 
 
 
