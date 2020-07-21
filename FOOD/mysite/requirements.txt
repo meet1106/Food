@@ -33,7 +33,7 @@ six==1.12.0
 Unidecode==1.0.23
 urllib3==1.24.1
 virtualenv==16.1.0
-wagtail==2.3
+wagtail==2.7.4
 wagtailcomments-xtd==0.0.2
 wagtailfontawesome==1.1.3
 webencodings==0.5.1
